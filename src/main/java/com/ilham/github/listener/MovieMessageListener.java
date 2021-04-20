@@ -28,10 +28,10 @@ public class MovieMessageListener extends ListenerAdapter {
 
     if (message.startsWith("!add-movie")) {
       String[] arguments = message.split(" ", 2);
-
       String movie = arguments[1];
 
       movieService.addMovie(movie);
+
       returnMessage = "Added movie: " + movie;
     } else if (message.startsWith("!recommend-movie-from")) {
       String[] arguments = message.split(" ", 2);
