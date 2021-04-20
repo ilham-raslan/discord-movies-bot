@@ -19,12 +19,7 @@ public class MovieMessageListener extends ListenerAdapter {
     String returnMessage = "";
 
     if (message.startsWith("!addMovie")) {
-      String[] arguments = message.split(" ");
-
-      if (arguments.length > 2) {
-        log.warn("Invalid input, ignoring this command");
-        return;
-      }
+      String[] arguments = message.split(" ", 2);
 
       String movie = arguments[1];
 
