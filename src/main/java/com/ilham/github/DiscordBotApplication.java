@@ -12,7 +12,8 @@ public class DiscordBotApplication {
 
   public static void main(String[] args) throws LoginException {
     Properties credentialProperties = new CredentialProperties();
-    JDA jda = JDABuilder.createDefault(credentialProperties.getProperty("discord-bot-token")).build();
+    JDA jda =
+        JDABuilder.createDefault(credentialProperties.getProperty("discord-bot-token")).build();
     jda.addEventListener(new MovieMessageListener());
   }
 }
