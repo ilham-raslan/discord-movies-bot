@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import javax.security.auth.login.LoginException;
 import java.util.Properties;
 
-public class DiscordBotApplication {
+public class DiscordMoviesBotApplication {
 
   public static void main(String[] args) throws LoginException {
     Properties credentialProperties = new CredentialProperties();
