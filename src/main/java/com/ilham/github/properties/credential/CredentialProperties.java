@@ -12,12 +12,12 @@ public class CredentialProperties extends Properties {
 
   public CredentialProperties() {
     try (InputStream inputStream =
-        getClass().getClassLoader().getResourceAsStream(Constants.credentialPropertiesFileName)) {
+        getClass().getClassLoader().getResourceAsStream(Constants.CREDENTIAL_PROPERTIES_FILE_NAME)) {
       if (inputStream != null) {
         super.load(inputStream);
       } else {
         throw new FileNotFoundException(
-            Constants.credentialPropertiesFileName + " not found in the classpath.");
+            Constants.CREDENTIAL_PROPERTIES_FILE_NAME + " not found in the classpath.");
       }
     } catch (Exception e) {
       log.error("Error: " + e);

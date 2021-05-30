@@ -12,12 +12,12 @@ public class ApplicationProperties extends Properties {
 
   public ApplicationProperties() {
     try (InputStream inputStream =
-        getClass().getClassLoader().getResourceAsStream(Constants.applicationPropertiesFileName)) {
+        getClass().getClassLoader().getResourceAsStream(Constants.APPLICATION_PROPERTIES_FILE_NAME)) {
       if (inputStream != null) {
         super.load(inputStream);
       } else {
         throw new FileNotFoundException(
-            Constants.applicationPropertiesFileName + " not found in the classpath.");
+            Constants.APPLICATION_PROPERTIES_FILE_NAME + " not found in the classpath.");
       }
     } catch (Exception e) {
       log.error("Error: " + e);
